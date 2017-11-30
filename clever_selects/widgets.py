@@ -53,7 +53,7 @@ class ChainedSelectMixin(object):
                         parent_field.attr('chained_ids', chained_ids + ",%(chained_id)s");
 
                     parent_field.on('change', function() {
-                        $(this).loadAllChainedChoices();
+                        loadAllChainedChoices($(this));
                     });
                 });
             })(jQuery || django.jQuery);
