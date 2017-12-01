@@ -5,6 +5,7 @@ function loadChildChoices(parentField, child) {
 
     var headers = new Headers();
     headers.append("Accept", "application/json");
+    headers.append("Access-Control-Allow-Origin", "*");
 
     var request = new Request(
         ajaxUrl + "?field=" + valueField.getAttribute("name") + "&parent_field=" + parentField.attr("name") + "&parent_value=" + parentField.value,
