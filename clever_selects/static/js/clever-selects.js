@@ -7,7 +7,7 @@ function loadChildChoices(parentField, child) {
     headers.append("Accept", "application/json");
 
     var request = new Request(
-        ajaxUrl + "?field=" + valueField.getAttribute("name") + "&parent_field=" + parentField.getAttribute("name") + "&parent_value=" + parentField.value,
+        ajaxUrl + "?field=" + valueField.getAttribute("name") + "&parent_field=" + parentField.attr("name") + "&parent_value=" + parentField.value,
         {method: "GET", headers: headers}
     );
 
@@ -33,7 +33,7 @@ function loadChildChoices(parentField, child) {
 };
 
 function loadAllChainedChoices(parentField) {
-    var chained_ids = parentField.getAttribute('chained_ids').split(",");
+    var chained_ids = parentField.attr('chained_ids').split(",");
 
     chained_ids.forEach(function(chained_id) {
         var child = document.getElementById(chained_id);
