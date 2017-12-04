@@ -7,7 +7,7 @@ function loadChildChoices(parentField, child) {
     headers.append("Accept", "application/json");
 
     var request = new Request(
-        ajaxUrl + "?field=" + valueField.getAttribute("name") + "&parent_field=" + parentField.attr("name") + "&parent_value=" + parentField.value,
+        ajaxUrl + "?field=" + valueField.getAttribute("name") + "&parent_field=" + parentField.attr("name") + "&parent_value=" + parentField[0].value,
         {method: "GET", headers: headers}
     );
 
